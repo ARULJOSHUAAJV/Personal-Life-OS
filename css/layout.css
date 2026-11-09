@@ -1,0 +1,45 @@
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar-container {
+    width: var(--sidebar-width);
+    background-color: var(--color-bg-primary);
+    border-right: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0; /* Prevents overflow */
+}
+
+.header-container {
+    height: var(--header-height);
+    background-color: var(--color-bg-primary);
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    padding: 0 var(--spacing-md);
+}
+
+.page-content {
+    padding: var(--spacing-lg);
+    flex: 1;
+    overflow-y: auto;
+}
+
+.page-header {
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .sidebar-container {
+        display: none; /* Will implement drawer behavior later */
+    }
+}
